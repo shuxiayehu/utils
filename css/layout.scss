@@ -1,0 +1,51 @@
+//绝对定位样式
+@mixin pa($left:null,$top:null,$right:null,$bottom:null,$z-index:null){
+  position: absolute;
+  left:$left;
+  top:$top;
+  right:$right;
+  bottom: $bottom;
+  z-index: $z-index;
+}
+//相对定位样式
+@mixin pr($left:null,$top:null,$right:null,$bottom:null,$z-index:null){
+  position: relative;
+  left: $left;
+  top:$top;
+  right:$right;
+  bottom: $bottom;
+  z-index: $z-index;
+}
+
+//相对于浏览器窗口定位
+@mixin pf($left:null,$top:null,$right:null,$bottom:null,$z-index:null){
+  position: fixed;
+  left: $left;
+  top:$top;
+  right:$right;
+  bottom: $bottom;
+  z-index: $z-index;
+}
+
+//flex布局
+@mixin flex(){
+  display: $flex;
+  flex-flow: $flex-flow;
+  justify-content: $justify-content;
+  align-items: $alig-items;
+}
+
+//item样式
+@mixin itemCss(){
+
+}
+
+//浮动
+@mixin float($float){
+  float: $float;
+}
+
+//清除浮动 作用于浮动元素的父元素
+@mixin clearFloat(){
+  &:after {clear:both;content:'.';display:block;width: 0;height: 0;visibility:hidden;}
+}
