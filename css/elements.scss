@@ -1,0 +1,13 @@
+@import './layout.scss';
+//背景透明样式
+@mixin opacityCss($index:null,$bgimg:null,$bgcolor:null){
+  filter:alpha(opacity =#{$index});
+  opacity:$index;
+  background-color: $bgcolor;
+  background-image:url(`#{$bgimg}`);
+}
+
+//去掉ul列表默认样式
+ul{
+    list-style-type: none;
+}
